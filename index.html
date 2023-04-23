@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <button onclick="openModal()">Đặt vé</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Đặt vé khám bệnh</h2>
+            <form id="bookingForm">
+                <label for="maBN">Mã bệnh nhân:</label>
+                <input type="text" id="maBN" name="maBN"><br>
+
+                <label for="matKhau">Mật khẩu:</label>
+                <input type="password" id="matKhau" name="matKhau"><br>
+
+                <label for="ngayKham">Ngày khám:</label>
+                <input type="date" id="ngayKham" name="ngayKham"><br>
+
+                <label>Loại dịch vụ:</label>
+                <input type="checkbox" id="khamYeuCau" name="loaiDichVu" value="khamYeuCau">
+                <label for="khamYeuCau">Khám theo yêu cầu</label>
+                <input type="checkbox" id="dieuTriNgoaiTru" name="loaiDichVu" value="dieuTriNgoaiTru">
+                <label for="dieuTriNgoaiTru">Điều trị ngoại trú</label>
+                <input type="checkbox" id="bsYeuCau" name="loaiDichVu" value="bsYeuCau">
+                <label for="bsYeuCau">Bác sĩ theo yêu cầu</label><br>
+
+                <label for="chuyenKhoa">Chuyên khoa:</label>
+                <select id="chuyenKhoa" name="chuyenKhoa">
+                    <option value="ngoaiTongQuat">Ngoại tổng quát</option>
+                    <option value="nhi">Nhi</option>
+                    <option value="noiTongQuat">Nội tổng quát</option>
+                </select><br>
+
+                <input id="submitBtn" type="submit" value="Đặt lịch">
+                <button class="close" onclick="closeModal()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Mã bệnh nhân</th>
+            <th>Mật khẩu</th>
+            <th>Ngày khám</th>
+            <th>Phụ thu dịch vụ</th>
+            <th>Chuyên khoa</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>123456a</td>
+            <td>BN-012345</td>
+            <td>12/08/2020</td>
+            <td>1000000</td>
+            <td>Chuyên khoa tổng quát</td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+
+</html>
